@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0f172a;
+  --fg: #e2e8f0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.card {
+  @apply rounded-xl border border-slate-700 bg-slate-800/60 backdrop-blur p-5 hover:shadow-lg transition;
+}
+

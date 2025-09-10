@@ -1,0 +1,16 @@
+{
+  "name": "cv-jaime",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:web": "npm --workspace @cv/web run dev",
+    "dev:api": "npm --workspace @cv/api run dev",
+    "dev": "npm run dev:api & npm run dev:web",
+    "build": "npm --workspace @cv/api run build && npm --workspace @cv/web run build",
+    "start": "npm --workspace @cv/api run start & npm --workspace @cv/web run start"
+  }
+}
+
