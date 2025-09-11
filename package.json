@@ -5,12 +5,16 @@
   "workspaces": [
     "apps/*"
   ],
+  "overrides": {
+    "typescript": "5.5.4"
+  },
   "scripts": {
+    "clean": "rm -rf node_modules apps/web/.next && npm install",
     "dev:web": "npm --workspace @cv/web run dev",
+    "dev:web:3001": "npm --workspace @cv/web run dev:3001",
     "dev:api": "npm --workspace @cv/api run dev",
     "dev": "npm run dev:api & npm run dev:web",
     "build": "npm --workspace @cv/api run build && npm --workspace @cv/web run build",
     "start": "npm --workspace @cv/api run start & npm --workspace @cv/web run start"
   }
 }
-
